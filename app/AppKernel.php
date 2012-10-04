@@ -7,7 +7,16 @@ class AppKernel extends Kernel
 {
     public function registerBundles()
     {
-        $bundles = array(
+        return array_merge(
+            $this->getSymfonyBundles(),
+            $this->getCourtyardBundles(),
+            $this->getDevelopmentBundles()
+        );
+    }
+    
+    protected function getSymfonyBundles()
+    {
+        return array(
             new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
             new Symfony\Bundle\SecurityBundle\SecurityBundle(),
             new Symfony\Bundle\TwigBundle\TwigBundle(),
@@ -19,16 +28,32 @@ class AppKernel extends Kernel
             new JMS\AopBundle\JMSAopBundle(),
             new JMS\DiExtraBundle\JMSDiExtraBundle($this),
             new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
+        ); 
+    }
+    
+    protected function getCourtyardBundles()
+    {
+        return array(
+            new Courtyard\Bundle\ForumBundle\CourtyardForumBundle(),
+            // restbundle
+            // userbundle
+            // restbundle
+            // themingbundle
+            // messagebundle
         );
-
-        if (in_array($this->getEnvironment(), array('dev', 'test'))) {
-            $bundles[] = new Acme\DemoBundle\AcmeDemoBundle();
-            $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
-            $bundles[] = new Sensio\Bundle\DistributionBundle\SensioDistributionBundle();
-            $bundles[] = new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle();
+    }
+    
+    protected function getDevelopmentBundles()
+    {
+        if (!in_array($this->getEnvironment(), array('dev', 'test'))) {
+            return array();
         }
-
-        return $bundles;
+        
+        return array(
+            new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle(),
+            new Sensio\Bundle\DistributionBundle\SensioDistributionBundle(),
+            new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle(),
+        );
     }
 
     public function registerContainerConfiguration(LoaderInterface $loader)

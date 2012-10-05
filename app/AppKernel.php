@@ -35,8 +35,8 @@ class AppKernel extends Kernel
     {
         return array(
             new Courtyard\Bundle\ForumBundle\CourtyardForumBundle(),
+            new FOS\UserBundle\FOSUserBundle(),
             // restbundle
-            // userbundle
             // restbundle
             // themingbundle
             // messagebundle

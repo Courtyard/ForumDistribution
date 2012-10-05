@@ -14,7 +14,7 @@ class AppKernel extends Kernel
             $this->getMyBundles()
         );
     }
-    
+
     protected function getSymfonyBundles()
     {
         return array(
@@ -29,34 +29,35 @@ class AppKernel extends Kernel
             new JMS\AopBundle\JMSAopBundle(),
             new JMS\DiExtraBundle\JMSDiExtraBundle($this),
             new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
-        ); 
+        );
     }
-    
+
     protected function getCourtyardBundles()
     {
         return array(
             new Courtyard\Bundle\ForumBundle\CourtyardForumBundle(),
             new FOS\UserBundle\FOSUserBundle(),
+            new WhiteOctober\BreadcrumbsBundle\WhiteOctoberBreadcrumbsBundle(),
             // restbundle
             // restbundle
             // themingbundle
             // messagebundle
         );
     }
-    
+
     protected function getDevelopmentBundles()
     {
         if (!in_array($this->getEnvironment(), array('dev', 'test'))) {
             return array();
         }
-        
+
         return array(
             new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle(),
             new Sensio\Bundle\DistributionBundle\SensioDistributionBundle(),
             new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle(),
         );
     }
-    
+
     protected function getMyBundles()
     {
         return array(

@@ -1,5 +1,5 @@
 {
-    "hash": "842c68f46150c9f5209466f0fe00b504",
+    "hash": "ac3232b6ed894b9a796be5451abc85ed",
     "packages": [
         {
             "name": "courtyard/forum",
@@ -1364,6 +1364,46 @@
                 "templating"
             ],
             "time": "1347961095"
+        },
+        {
+            "name": "whiteoctober/breadcrumbs-bundle",
+            "version": "2.1.x-dev",
+            "target-dir": "WhiteOctober/BreadcrumbsBundle",
+            "source": {
+                "type": "git",
+                "url": "git://github.com/whiteoctober/BreadcrumbsBundle.git",
+                "reference": "67ed84215d05bff1d4de22ce16e09bc0a0ae9b40"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/whiteoctober/BreadcrumbsBundle/zipball/67ed84215d05bff1d4de22ce16e09bc0a0ae9b40",
+                "reference": "67ed84215d05bff1d4de22ce16e09bc0a0ae9b40",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2",
+                "symfony/framework-bundle": "2.*,<2.2"
+            },
+            "time": "1345904937",
+            "type": "symfony-bundle",
+            "installation-source": "source",
+            "autoload": {
+                "psr-0": {
+                    "WhiteOctober\\BreadcrumbsBundle": ""
+                }
+            },
+            "authors": [
+                {
+                    "name": "Rich Sage",
+                    "email": "rich.sage@gmail.com",
+                    "homepage": "http://www.richsage.co.uk/"
+                }
+            ],
+            "description": "A small breadcrumbs bundle for Symfony2",
+            "homepage": "https://github.com/whiteoctober/BreadcrumbsBundle",
+            "keywords": [
+                "breadcrumbs"
+            ]
         }
     ],
     "packages-dev": null,
@@ -1371,7 +1411,7 @@
 
     ],
     "minimum-stability": "dev",
-    "stability-flags": [
-
-    ]
+    "stability-flags": {
+        "whiteoctober/breadcrumbs-bundle": 20
+    }
 }

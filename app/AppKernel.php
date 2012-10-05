@@ -10,7 +10,8 @@ class AppKernel extends Kernel
         return array_merge(
             $this->getSymfonyBundles(),
             $this->getCourtyardBundles(),
-            $this->getDevelopmentBundles()
+            $this->getDevelopmentBundles(),
+            $this->getMyBundles()
         );
     }
     
@@ -53,6 +54,13 @@ class AppKernel extends Kernel
             new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle(),
             new Sensio\Bundle\DistributionBundle\SensioDistributionBundle(),
             new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle(),
+        );
+    }
+    
+    protected function getMyBundles()
+    {
+        return array(
+            new Acme\UserBundle\AcmeUserBundle(),
         );
     }
 

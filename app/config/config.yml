@@ -57,3 +57,8 @@ swiftmailer:
     username:  %mailer_user%
     password:  %mailer_password%
     spool:     { type: memory }
+    
+courtyard_forum:
+    board_class:          Courtyard\Bundle\ForumBundle\Entity\Board
+    topic_class:          Courtyard\Bundle\ForumBundle\Entity\Topic
+    post_class:           Courtyard\Bundle\ForumBundle\Entity\Post

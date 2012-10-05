@@ -3,6 +3,7 @@ web/.htaccess
 app/bootstrap.php.cache
 app/cache/*
 app/logs/*
+app/config/parameters.yml
 build/
 vendor
 composer.phar

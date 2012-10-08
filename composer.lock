@@ -7,20 +7,24 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:Courtyard/Forum.git",
-                "reference": "2abca4ef5357490f45ad9433ccff6fd95d08dfca"
+                "reference": "47b89ffa871417e9123e46f71233e48847f70bab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/Courtyard/Forum/zipball/2abca4ef5357490f45ad9433ccff6fd95d08dfca",
-                "reference": "2abca4ef5357490f45ad9433ccff6fd95d08dfca",
+                "url": "https://github.com/Courtyard/Forum/zipball/47b89ffa871417e9123e46f71233e48847f70bab",
+                "reference": "47b89ffa871417e9123e46f71233e48847f70bab",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.2",
-                "symfony/dependency-injection": "2.x",
+                "doctrine/orm": ">=2.2.3,<2.4-dev",
+                "symfony/event-dispatcher": "2.x"
+            },
+            "require-dev": {
+                "symfony/event-dispatcher": "2.x",
                 "doctrine/orm": ">=2.2.3,<2.4-dev"
             },
-            "time": "1349333862",
+            "time": "1349630654",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -55,12 +59,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:Courtyard/ForumBundle.git",
-                "reference": "bba38a92679f8e7985cbaa7595ccb847ac30b205"
+                "reference": "1781dcaca1b4ec46d68879c9c67df6ed9cadf7bb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/Courtyard/ForumBundle/zipball/bba38a92679f8e7985cbaa7595ccb847ac30b205",
-                "reference": "bba38a92679f8e7985cbaa7595ccb847ac30b205",
+                "url": "https://github.com/Courtyard/ForumBundle/zipball/1781dcaca1b4ec46d68879c9c67df6ed9cadf7bb",
+                "reference": "1781dcaca1b4ec46d68879c9c67df6ed9cadf7bb",
                 "shasum": ""
             },
             "require": {
@@ -71,7 +75,7 @@
                 "symfony/validator": "2.1.*",
                 "courtyard/forum": "*"
             },
-            "time": "1349337464",
+            "time": "1349627134",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {

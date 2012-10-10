@@ -62,6 +62,7 @@ class AppKernel extends Kernel
     {
         return array(
             new Acme\UserBundle\AcmeUserBundle(),
+            new Acme\ForumBundle\AcmeForumBundle(),
         );
     }
 

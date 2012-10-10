@@ -49,9 +49,6 @@ doctrine:
     orm:
         auto_generate_proxy_classes: %kernel.debug%
         auto_mapping: true
-        
-        resolve_target_entities:
-            Courtyard\Forum\Entity\UserInterface: Acme\UserBundle\Entity\User
 
 # Swiftmailer Configuration
 swiftmailer:
@@ -62,9 +59,9 @@ swiftmailer:
     spool:     { type: memory }
     
 courtyard_forum:
-    board_class:          Courtyard\Bundle\ForumBundle\Entity\Board
-    topic_class:          Courtyard\Bundle\ForumBundle\Entity\Topic
-    post_class:           Courtyard\Bundle\ForumBundle\Entity\Post
+    board_class:          Acme\ForumBundle\Entity\Board
+    topic_class:          Acme\ForumBundle\Entity\Topic
+    post_class:           Acme\ForumBundle\Entity\Post
     
 fos_user:
     db_driver: orm
